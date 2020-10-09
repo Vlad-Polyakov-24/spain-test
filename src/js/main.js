@@ -3,8 +3,8 @@ window.$ = $;
 window.jquery = $;
 window.jQuery = $;
 
-import Swiper, { Navigation, Pagination } from 'swiper';
-Swiper.use([Navigation, Pagination]);
+import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
+Swiper.use([Navigation, Pagination, Autoplay]);
 import 'swiper/swiper-bundle.css';
 
 require('@fancyapps/fancybox');
@@ -37,7 +37,8 @@ const swiper = new Swiper('.swiper-container__top', {
 	slidesPerView: 1,
 	loop: true,
 	autoplay: {
-		delay: 500,
+		delay: 5000,
+		disableOnInteraction: false,
 	},
 	pagination: {
 		el: '.swiper-pagination',
@@ -50,7 +51,7 @@ const swiper_2 = new Swiper('.swiper-container__gallery', {
 	slidesPerView: 1,
 	loop: true,
 	autoplay: {
-		delay: 500,
+		delay: 10000,
 	},
 	breakpoints: {
 		375: {
