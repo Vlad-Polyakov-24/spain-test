@@ -4,8 +4,8 @@ window.jquery = $;
 window.jQuery = $;
 
 import Swiper, { Navigation, Pagination } from 'swiper';
-import 'swiper/swiper-bundle.css';
 Swiper.use([Navigation, Pagination]);
+import 'swiper/swiper-bundle.css';
 
 require('@fancyapps/fancybox');
 require('@fancyapps/fancybox/dist/jquery.fancybox.css');
