@@ -3,6 +3,8 @@ window.$ = $;
 window.jquery = $;
 window.jQuery = $;
 
+import objectFitImages from 'object-fit-images';
+
 import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
 Swiper.use([Navigation, Pagination, Autoplay]);
 import 'swiper/swiper-bundle.css';
@@ -108,4 +110,6 @@ $(document).ready(function () {
 		$('body,html').animate({ scrollTop: top }, 1500);
 	});
 });
-	/*=======*/
+/*=======*/
+
+objectFitImages();
