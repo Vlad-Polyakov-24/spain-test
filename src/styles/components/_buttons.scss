@@ -5,7 +5,7 @@
 	width: 100%;
 	max-width: 254px;
 	margin: 0 auto;
-	padding: 20px 0;
+	padding: 20px 10px;
 	border: none;
 	border-radius: 40px;
 	background-color: #FFC700;
@@ -45,14 +45,14 @@
 
 	@include media ('<desktop_min') {
 		max-width: 194px;
-		padding: 16px 0;
+		padding: 18px 10px;
 		font-size: 20px;
 		line-height: 24px;
 	}
 
 	@include media ('<=phone-xs') {
 		max-width: 143px;
-		padding: 13px 0;
+		padding: 16px 10px;
 		font-size: 18px;
 		line-height: 22px;
 	}

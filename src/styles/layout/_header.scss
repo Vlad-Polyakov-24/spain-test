@@ -16,7 +16,6 @@
 
 	&__row {
 		display: flex;
-		align-items: center;
 		justify-content: space-between;
 		position: relative;
 		padding: 4px 0;
@@ -27,7 +26,7 @@
 		width: 130px;
 		text-indent: -9999px;
 		overflow: hidden;
-
+		cursor: pointer;
 		flex-shrink: 0;
 	}
 
@@ -40,9 +39,12 @@
 	}
 
 	&__menu {
+		width: calc(100% - 242px);
+		display: flex;
+		justify-content: center;
 
 		@include media('<=desktop_min') {
-			flex-grow: 1;
+			
 		}
 
 		@include media ('<=tb') {
@@ -64,23 +66,23 @@
 
 	&__menu-list {
 		display: flex;
-		justify-content: space-around;
-		align-items: center;
 		margin-right: -20px;
 		margin-left: -20px;
 		flex-wrap: wrap;
+		cursor: pointer;
 
-			@include media('<=desktop_min') {
-				margin-right: 0;
-				margin-left: 0;
-			}
+		@include media ('<desktop_min') {
+			margin-right: -7px;
+			margin-left: -7px;
+		}
 
-			@include media ('<=tb') {
+		@include media ('<=tb') {
 				flex-direction: column;
+				align-items: center;
 
 				li {
 					margin-bottom: 15px;
-					padding-bottom: 15px;
+					padding-bottom: 20px;
 					position: relative;
 
 						&:after {
@@ -102,7 +104,7 @@
 								}
 						}
 				}
-			}
+		}
 	}
 
 	&__menu-link {
@@ -111,7 +113,10 @@
 		color: #fff;
 		transition: .4s;
 		position: relative;
-		padding: 24px 20px;
+		padding: 0px 20px;
+		height: 100%;
+		display: flex;
+		align-items: center;
 
 		span {
 			position: relative;
@@ -130,21 +135,21 @@
 			}
 		}
 
-			@at-root :root.hover &:hover {
+		@at-root :root.hover &:hover {
 				color: #FFC700;
 
 				span:after {
 					opacity: 1;
 				}
-			}
+		}
 
-			@include media ('<=desktop_min') {
-				padding: 24px 0;
-			}
+		@include media ('<desktop_min') {
+			padding: 0px 7px;
+		}
 
-			@include media ('<=tb') {
+		@include media ('<=tb') {
 				font-size: 28px;
-			}
+		}
 	}
 
 	&__social-list {
@@ -276,6 +281,7 @@
 	@include media ('<desktop_min') {
 		&__logo {
 			width: 110px;
+			background: url('../images/logo.svg') 50%/85% 50px no-repeat;
 		}
 	}
 

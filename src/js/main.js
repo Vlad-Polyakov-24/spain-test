@@ -97,19 +97,6 @@ for (let i = 0; i < input.length; i++) {
 }
 /*=======*/
 
-/*SCROLL*/
-$(document).ready(function () {
-	$("#header-link, #home-link, #work-link, #some-link, #footer-link").on("click", "a", function (event) {
 
-		event.preventDefault();
-
-		var id = $(this).attr('href'),
-
-			top = $(id).offset().top;
-
-		$('body,html').animate({ scrollTop: top }, 1500);
-	});
-});
-/*=======*/
 
 objectFitImages();

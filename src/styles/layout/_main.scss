@@ -10,6 +10,7 @@
 		left: 0;
 		background-color: rgba(0, 0, 0, .4);
 		z-index: 2;
+		display: flex;
 	}
 
 	&__content-wrap {
@@ -50,7 +51,6 @@
 			p {
 				font-size: 22px;
 				line-height: 26px;
-				padding: 0 15px;
 				margin-bottom: 40px;
 			}
 		}
@@ -58,7 +58,7 @@
 
 	@include media ('<=tb') {
 		&__content-wrap {
-			padding-top: 52px;
+			padding-top: 61px;
 		}
 	}
 
@@ -94,14 +94,6 @@
 	&__row {
 		display: flex;
 		justify-content: space-between;
-
-		p {
-			font-size: 18px;
-			line-height: 26px;
-			font-weight: 400;
-			color: #333333;
-			max-width: 660px;
-		}
 	}
 
 	&__image {
@@ -129,18 +121,26 @@
 		}
 	}
 
+	&__text {
+		font-size: 18px;
+		line-height: 26px;
+		font-weight: 400;
+		color: #333333;
+		max-width: calc(100% - 450px);
+	}
+
 	@include media ('<desktop_min') {
 		padding: 70px 0 75px;
 
 		&__row {
 			flex-direction: column;
 			align-items: center;
+		}
 
-			p {
-				max-width: 100%;
-				font-size: 16px;
-				line-height: 24px;
-			}
+		&__text {
+			max-width: 100%;
+			font-size: 16px;
+			line-height: 24px;
 		}
 
 		&__image {
@@ -151,13 +151,11 @@
 	}
 
 	@include media ('<=phone-xs') {
-		padding: 40px 0;
+		padding: 40px 0 41px;
 
-		&__row {
-			p {
-				font-size: 14px;
-				line-height: 22px;
-			}
+		&__text {
+			font-size: 14px;
+			line-height: 22px;
 		}
 
 		&__image {
@@ -234,8 +232,15 @@
 		background-color: $white;
 		margin-bottom: 30px;
 
-		img {
-			display: block;
+		span {
+			width: 51px;
+			height: 51px;
+
+			svg,path {
+				width: 100%;
+				height: 100%;
+				display: block;
+			}
 		}
 	}
 
@@ -301,7 +306,7 @@
 			height: 100px;
 			margin-bottom: 20px;
 
-			img {
+			span {
 				width: 42px;
 				height: 42px;
 			}
@@ -335,7 +340,7 @@
 	}
 
 	@include media ('<=phone-xs') {
-		padding: 40px 0;
+		padding: 40px 0 36px;
 
 		&__list {
 			max-width: 270px;
@@ -361,7 +366,7 @@
 			height: 80px;
 			margin-bottom: 10px;
 
-			img {
+			span {
 				width: 33px;
 				height: 33px;
 			}
@@ -481,7 +486,7 @@
 	}
 
 	@include media ('<tb') {
-		padding: 40px 0;
+		padding: 40px 0 43px;
 
 		&__list {
 			padding: 0;
@@ -547,28 +552,14 @@
 
 /*WORKS*/
 .works {
-	max-width: 100%;
-	width: 100%;
-
-	&__wrap {
-		position: relative;
-		padding-bottom: calc(676 / 1440 * 100%);
-		height: 0;
-	}
-
-	&__image {
-		background-image: url('/images/works/information-bg.jpg');
-		background-position: 50%;
-		background-size: cover;
-		background-repeat: no-repeat;
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		top: 0;
-		left: 0;
-		display: flex;
-		align-items: center;
-	}
+	background-image: url('/images/works/information-bg.jpg');
+	background-position: 50%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	align-items: center;
+	padding-top: calc(177 / 1440 * 100%);
+	padding-bottom: calc(177 / 1440 * 100%);
 
 	p	{
 		font-size: 24px;
@@ -585,10 +576,6 @@
 	}
 
 	@include media ('<desktop_min') {
-		
-		&__wrap {
-			padding-bottom: calc(432 / 768 * 100%);
-		}
 
 		p	{
 			font-size: 16px;
@@ -603,9 +590,8 @@
 	}
 
 	@include media ('<tb') {
-		&__wrap {
-			padding-bottom: 416px;
-		}
+		padding-top: calc(192 / 1440 * 100%);
+		padding-bottom: calc(192 / 1440 * 100%);
 		
 		p	{
 			font-size: 14px;
@@ -616,11 +602,15 @@
 		.section__title {
 			font-size: 32px;
 			line-height: 48px;
-			padding-bottom: 8px;
+		}
+
+		.mr30 {
+			margin-bottom: 30px;
 		}
 
 		.btn {
 			max-width: 200px;
+			padding: 14px 10px;
 		}
 	}
 }
@@ -697,7 +687,7 @@
 	}
 
 	@include media ('<desktop_min') {
-		padding: 70px 0 73px;
+		padding: 70px 0;
 
 		&__list {
 			display: block;
@@ -843,7 +833,7 @@
 	}
 
 	@include media ('<desktop_min') {
-		padding: 70px 0 73px;
+		padding: 70px 0;
 
 		.section__title {
 			font-size: 32px;

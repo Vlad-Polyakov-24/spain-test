@@ -25,7 +25,7 @@
 	<div class="wrapper" id="wrapper">
 		<%= _.template(require('./parts/header.html'))() %>
 		<div class="app" id="app">
-			<section id="home-link" class="top">
+			<section id="home" class="top">
 				<div class="swiper-container swiper-container__top">
 					<ul class="swiper-wrapper">
 						<li class="swiper-slide swiper-slide__top"><img src="/images/top/bg-top_1.jpg" alt="top_image"></li>
@@ -35,21 +35,23 @@
 					<div class="swiper-pagination swiper-pagination__top"></div>
 				</div>
 				<div class="top__content">
-					<div class="top__content-wrap">
-						<h1>Welcome to our site</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed <br class="mb">do eiusmod <br
-								class="pc">tempor
-							incididunt ut labore
-							et
-							dolore magna <br class="mb">aliqua. Ut enim ad minim veniam, <br class="pc">quis nostrud
-							exercitation <br class="mb">ullamco
-							laboris nisi ut
-							aliquip ex ea commodo <br class="pc">consequat. </p>
-						<a href="#contacts-link" class="btn">Contact Us</a>
+					<div class="container">
+						<div class="top__content-wrap">
+							<h1>Welcome to our site</h1>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed <br class="mb">do eiusmod <br
+									class="pc">tempor
+								incididunt ut labore
+								et
+								dolore magna <br class="mb">aliqua. Ut enim ad minim veniam, <br class="pc">quis nostrud
+								exercitation <br class="mb">ullamco
+								laboris nisi ut
+								aliquip ex ea commodo <br class="pc">consequat. </p>
+							<a class="btn" data-anchor="contacts"><span>Contact Us</span></a>
+						</div>
 					</div>
 				</div>
 			</section>
-			<section id="about-link" class="about">
+			<section id="about" class="about">
 				<div class="container">
 					<h2 class="section__title mr60">About Us</h2>
 					<div class="about__row">
@@ -58,20 +60,28 @@
 								<img src="images/about/about-img.jpg" alt="about-image">
 							</div>
 						</div>
-						<p>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-							totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae
-							dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut
-							fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro
-							quisquam est, qui dolorem ipsum, quia dolor sit amet consectetur adipisci[ng] velit, sed quia non
-							numquam [do] eius modi tempora inci[di]dunt, ut labore et dolore magnam aliquam quaerat voluptatem.
-							Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut
-							aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit, qui in ea voluptate velit
-							esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla
-							pariatur?</p>
+						<div class="about__text">
+							<p>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque
+								laudantium,
+								totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae
+								dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut
+								fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque
+								porro
+								quisquam est, qui dolorem ipsum, quia dolor sit amet consectetur adipisci[ng] velit, sed quia
+								non
+								numquam [do] eius modi tempora inci[di]dunt, ut labore et dolore magnam aliquam quaerat
+								voluptatem.
+								Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi
+								ut
+								aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit, qui in ea voluptate
+								velit
+								esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla
+								pariatur?</p>
+						</div>
 					</div>
 				</div>
 			</section>
-			<section id="services-link" class="services">
+			<section id="services" class="services">
 				<div class="container">
 					<h2 class="section__title ttl-white mr30">Our Services</h2>
 					<p class="section__subtitle">Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium
@@ -83,7 +93,14 @@
 						<li class="services__list-item">
 							<div class="services__list-inner">
 								<div class="services__item-ico">
-									<img src="/images/services/icons/services-ico_1.svg" alt="services-ico">
+									<span>
+										<svg width="51" height="51" viewBox="0 0 51 51" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M25.5 0C11.424 0 0 11.424 0 25.5C0 39.576 11.424 51 25.5 51C39.576 51 51 39.576 51 25.5C51 11.424 39.576 0 25.5 0ZM20.4 38.25L7.65 25.5L11.2455 21.9045L20.4 31.0335L39.7545 11.679L43.35 15.3L20.4 38.25Z"
+												fill="#FFC700" />
+										</svg>
+									</span>
 								</div>
 								<h3>
 									Title1
@@ -95,7 +112,14 @@
 						<li class="services__list-item">
 							<div class="services__list-inner">
 								<div class="services__item-ico">
-									<img src="/images/services/icons/services-ico_2.svg" alt="services-ico">
+									<span>
+										<svg width="50" height="49" viewBox="0 0 50 49" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M25 0C11.2 0 0 10.976 0 24.5C0 38.024 11.2 49 25 49C38.8 49 50 38.024 50 24.5C50 10.976 38.8 0 25 0ZM25 7.35C29.15 7.35 32.5 10.633 32.5 14.7C32.5 18.767 29.15 22.05 25 22.05C20.85 22.05 17.5 18.767 17.5 14.7C17.5 10.633 20.85 7.35 25 7.35ZM25 42.14C18.75 42.14 13.225 39.004 10 34.251C10.075 29.3755 20 26.705 25 26.705C29.975 26.705 39.925 29.3755 40 34.251C36.775 39.004 31.25 42.14 25 42.14Z"
+												fill="#FFC700" />
+										</svg>
+									</span>
 								</div>
 								<h3>
 									Title2
@@ -107,7 +131,14 @@
 						<li class="services__list-item">
 							<div class="services__list-inner">
 								<div class="services__item-ico">
-									<img src="/images/services/icons/services-ico_3.svg" alt="services-ico">
+									<span>
+										<svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M47.5 10H42.5V32.5H10V37.5C10 38.875 11.125 40 12.5 40H40L50 50V12.5C50 11.125 48.875 10 47.5 10ZM37.5 25V2.5C37.5 1.125 36.375 0 35 0H2.5C1.125 0 0 1.125 0 2.5V37.5L10 27.5H35C36.375 27.5 37.5 26.375 37.5 25Z"
+												fill="#FFC700" />
+										</svg>
+									</span>
 								</div>
 								<h3>
 									Title3
@@ -119,7 +150,14 @@
 						<li class="services__list-item">
 							<div class="services__list-inner">
 								<div class="services__item-ico">
-									<img src="/images/services/icons/services-ico_4.svg" alt="services-ico">
+									<span>
+										<svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M25 0C11.1944 0 0 11.1944 0 25C0 38.8056 11.1944 50 25 50C27.3056 50 29.1667 48.1389 29.1667 45.8333C29.1667 44.75 28.75 43.7778 28.0833 43.0278C27.4444 42.3056 27.0278 41.3333 27.0278 40.2778C27.0278 37.9722 28.8889 36.1111 31.1944 36.1111H36.1111C43.7778 36.1111 50 29.8889 50 22.2222C50 9.94444 38.8056 0 25 0ZM9.72222 25C7.41667 25 5.55556 23.1389 5.55556 20.8333C5.55556 18.5278 7.41667 16.6667 9.72222 16.6667C12.0278 16.6667 13.8889 18.5278 13.8889 20.8333C13.8889 23.1389 12.0278 25 9.72222 25ZM18.0556 13.8889C15.75 13.8889 13.8889 12.0278 13.8889 9.72222C13.8889 7.41667 15.75 5.55556 18.0556 5.55556C20.3611 5.55556 22.2222 7.41667 22.2222 9.72222C22.2222 12.0278 20.3611 13.8889 18.0556 13.8889ZM31.9444 13.8889C29.6389 13.8889 27.7778 12.0278 27.7778 9.72222C27.7778 7.41667 29.6389 5.55556 31.9444 5.55556C34.25 5.55556 36.1111 7.41667 36.1111 9.72222C36.1111 12.0278 34.25 13.8889 31.9444 13.8889ZM40.2778 25C37.9722 25 36.1111 23.1389 36.1111 20.8333C36.1111 18.5278 37.9722 16.6667 40.2778 16.6667C42.5833 16.6667 44.4444 18.5278 44.4444 20.8333C44.4444 23.1389 42.5833 25 40.2778 25Z"
+												fill="#FFC700" />
+										</svg>
+									</span>
 								</div>
 								<h3>
 									Title4
@@ -131,7 +169,7 @@
 					</ul>
 				</div>
 			</section>
-			<section id="features-link" class="features">
+			<section id="features" class="features">
 				<div class="container">
 					<h2 class="section__title mr60">Features</h2>
 					<ul class="features__list">
@@ -174,26 +212,22 @@
 					</ul>
 				</div>
 			</section>
-			<section id="work-link" class="works">
-				<div class="works__wrap">
-					<div class="works__image">
-						<div class="container">
-							<h2 class="section__title ttl-white mr30">More information about our work</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <br class="pc">tempor
-								<br class="mb">incididunt ut
-								labore
-								et dolore magna aliqua. Ut enim ad minim veniam, <br class="pc">quis <br class="mb">nostrud
-								exercitation ullamco
-								laboris
-								nisi
-								ut
-								aliquip ex ea commodo <br class="pc">consequat. </p>
-							<a class="btn" href="#contacts-link">Contact Us</a>
-						</div>
-					</div>
+			<section id="work" class="works">
+				<div class="container">
+					<h2 class="section__title ttl-white mr30">More information about our work</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <br class="pc">tempor
+						<br class="mb">incididunt ut
+						labore
+						et dolore magna aliqua. Ut enim ad minim veniam, <br class="pc">quis <br class="mb">nostrud
+						exercitation ullamco
+						laboris
+						nisi
+						ut
+						aliquip ex ea commodo <br class="pc">consequat. </p>
+					<a class="btn" data-anchor="contacts"><span>Contact Us</span></a>
 				</div>
 			</section>
-			<section id="galerry-link" class="galerry">
+			<section id="galerry" class="galerry">
 				<h2 class="section__title mr60">Gallery</h2>
 				<div class="swiper-container swiper-container__gallery">
 					<ul class="swiper-wrapper swiper-wrapper__gallery">
@@ -249,7 +283,7 @@
 					<div class="swiper-pagination"></div>
 				</div>
 			</section>
-			<section id="some-link" class="some">
+			<section id="some" class="some">
 				<div class="container">
 					<h2 class="section__title ttl-white mr60">Some Title</h2>
 					<ul class="some__list">
@@ -290,10 +324,10 @@
 							</div>
 						</li>
 					</ul>
-					<a href="#contacts-link" class="btn">Contact Us</a>
+					<a class="btn" data-anchor="contacts"><span>Contact Us</span></a>
 				</div>
 			</section>
-			<section id="contacts-link" class="contacts">
+			<section id="contacts" class="contacts">
 				<div class="container">
 					<h2 class="section__title mr60">Contact us</h2>
 					<div class="contacts__row">

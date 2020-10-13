@@ -1,8 +1,8 @@
-<footer id="footer-link" class="footer">
+<footer id="footer" class="footer">
 	<div class="container">
 		<div class="footer__row">
 			<strong class="footer__logo">
-				<a href="#home-link">
+				<a data-anchor>
 					<svg width="227" height="94" viewBox="0 0 227 94" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<circle cx="47" cy="47" r="47" fill="#FFC700" />
 						<path
@@ -12,7 +12,7 @@
 				</a>
 			</strong>
 			<ul class="footer__social-list">
-				<li><a href="" class="footer__social-ico"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+				<li><a href="#" class="footer__social-ico"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
 							xmlns="http://www.w3.org/2000/svg">
 							<path
 								d="M22.467 0H9.53297C4.27647 0 0 4.27647 0 9.53297V22.467C0 27.7235 4.27647 32 9.53297 32H22.467C27.7235 32 32 27.7235 32 22.467V9.53297C31.9999 4.27647 27.7235 0 22.467 0ZM28.7808 22.467C28.7808 25.954 25.954 28.7808 22.467 28.7808H9.53297C6.046 28.7808 3.2192 25.954 3.2192 22.467V9.53297C3.2192 6.04594 6.046 3.2192 9.53297 3.2192H22.467C25.954 3.2192 28.7808 6.04594 28.7808 9.53297V22.467Z"
@@ -25,7 +25,7 @@
 								fill="white" />
 						</svg>
 					</a></li>
-				<li><a href="" class="footer__social-ico"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+				<li><a href="#" class="footer__social-ico"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
 							xmlns="http://www.w3.org/2000/svg">
 							<path
 								d="M27.6878 0H4.3121C1.93064 0 0 1.93055 0 4.31206V27.6878C0 30.0693 1.93056 31.9998 4.3121 31.9998H15.8409L15.8605 20.5648H12.8897C12.5036 20.5648 12.1903 20.2526 12.1888 19.8666L12.1745 16.1806C12.173 15.7924 12.4873 15.4769 12.8755 15.4769H15.841V11.9153C15.841 7.78215 18.3653 5.53159 22.0524 5.53159H25.0779C25.465 5.53159 25.7789 5.84542 25.7789 6.23259V9.34063C25.7789 9.72764 25.4653 10.0414 25.0783 10.0416L23.2216 10.0425C21.2164 10.0425 20.8282 10.9953 20.8282 12.3936V15.477H25.2342C25.654 15.477 25.9797 15.8436 25.9303 16.2605L25.4934 19.9465C25.4516 20.2992 25.1525 20.565 24.7973 20.565H20.8478L20.8282 32H27.688C30.0694 32 32 30.0695 32 27.688V4.31206C31.9999 1.93055 30.0694 0 27.6878 0Z"
@@ -34,24 +34,28 @@
 					</a></li>
 			</ul>
 			<ul class="footer__menu-list">
-				<li><a href="#home-link" class="footer__menu-link">Home</a></li>
-				<li><a href="#about-link" class="footer__menu-link">About us</a></li>
-				<li><a href="#services-link" class="footer__menu-link">Services</a></li>
-				<li><a href="#features-link" class="footer__menu-link">Features</a></li>
-				<li><a href="#some-link" class="footer__menu-link">News</a></li>
-				<li><a href="#contacts-link" class="footer__menu-link">Contacts</a></li>
+				<li><a class="footer__menu-link" data-anchor>Home</a></li>
+				<li><a class="footer__menu-link" data-anchor="about">About us</a></li>
+				<li><a class="footer__menu-link" data-anchor="services">Services</a></li>
+				<li><a class="footer__menu-link" data-anchor="features">Features</a></li>
+				<li><a class="footer__menu-link" data-anchor="some">News</a></li>
+				<li><a class="footer__menu-link" data-anchor="contacts">Contacts</a></li>
 			</ul>
 			<address>
 				<ul class="footer__address-list">
-					<li class="footer__address-link"><a href="tel:000000000000">000-000-000-000</a></li>
-					<li class="footer__address-link"><a href="mailto:Loremipsum@mail.com">Loremipsum@mail.com</a></li>
-					<li class="footer__address-link">Loremipsumloremipsum</li>
+					<li style="background: url('../images/footer/address/phone.png') 0%/25px 25px no-repeat;"><a
+							class="footer__address-link" href="tel:000000000000">000-000-000-000</a></li>
+					<li style="background: url('../images/footer/address/mail.png') 0%/24px 17px no-repeat;"><a
+							class="footer__address-link" href="mailto:Loremipsum@mail.com">Loremipsum@mail.com</a></li>
+					<li class="footer__address-link"
+						style="background: url('../images/footer/address/locate.png') 0%/19px 26px no-repeat;">
+						<span>Loremipsumloremipsum</span></li>
 				</ul>
 			</address>
 		</div>
 		<div class="footer__row-privacy">
 			<p>© 2020 loremipsum</p>
-			<a href="">Privacy policy</a>
+			<a href="#">Privacy policy</a>
 		</div>
 	</div>
 </footer>
